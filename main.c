@@ -26,6 +26,7 @@ int main(int argc, char **argv)
 	jmax = atoi(argv[2]);
 	hashsize = atoi(argv[3]);
 	buf = (char**)malloc(sizeof(*buf)*imax);
+
 	for (i=0; i<imax; i++) {
 		buf[i] = (char*)malloc(sizeof(**buf)*jmax);
 		memset(buf[i], '\0', sizeof(*(buf[i])));
@@ -48,7 +49,7 @@ int main(int argc, char **argv)
 		}
 	}
 	time = dclock() - t0;
-	printf("time to search the key[s]: %lf\n", time);
+	printf("time to search the keys [s]: %lf\n", time);
 
 	clear_hashtable(hp);
 	for (i=0; i<imax; i++)
