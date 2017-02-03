@@ -1,15 +1,16 @@
 hash - a simple hash table which is based on linked list.
        the element is string.
+       when the hash table size equals to one, it is just a linked list.
 
 [dc-fukuoka@mycentos7 hash]$ ./a.out 
 usage: ./a.out <numbur of buffers> <size of buffers> <hash table size>
 
-[dc-fukuoka@mycentos7 hash]$ ./a.out 16384 32 1
-generate random number andd add them to hashtable...
+[dc-fukuoka@mycentos7 hash]$ ./a.out 32768 32 1
+generate random number and add them to hashtable...
 try to find the values from the hashtable...
-time to search the key[s]: 0.779249
+time to search the key[s]: 3.157472
 
-[dc-fukuoka@mycentos7 hash]$ ./a.out 16384 32 16384
-generate random number andd add them to hashtable...
+[dc-fukuoka@mycentos7 hash]$ ./a.out 32768 32 32768
+generate random number and add them to hashtable...
 try to find the values from the hashtable...
-time to search the key[s]: 0.004158
+time to search the key[s]: 0.004795

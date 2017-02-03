@@ -32,7 +32,7 @@ int main(int argc, char **argv)
 	}
        	
 	hashtable_t *hp = gen_hashtable(hashsize);
-	printf("generate random number andd add them to hashtable...\n");
+	printf("generate random number and add them to hashtable...\n");
 	for(i=0; i<imax; i++) {
 		sprintf(buf[i], "%d", rand());
 		add_hashtable(hp, buf[i], i);
