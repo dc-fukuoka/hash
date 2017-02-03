@@ -1,0 +1,15 @@
+hash - a simple hash table which is based on linked list.
+       the element is string.
+
+[dc-fukuoka@mycentos7 hash]$ ./a.out 
+usage: ./a.out <numbur of buffers> <size of buffers> <hash table size>
+
+[dc-fukuoka@mycentos7 hash]$ ./a.out 16384 32 1
+generate random number andd add them to hashtable...
+try to find the values from the hashtable...
+time to search the key[s]: 0.779249
+
+[dc-fukuoka@mycentos7 hash]$ ./a.out 16384 32 16384
+generate random number andd add them to hashtable...
+try to find the values from the hashtable...
+time to search the key[s]: 0.004158
