@@ -118,31 +118,3 @@ bool add_hashtable(hashtable_t *hp, const char *key, int val)
 		return false;
 	}
 }
-
-bool del_hashtable(hashtable_t *hp, const char *key)
-{
-	int hashval;
-	list_t *lp;
-	
-	hashval= get_hashval(hp, key);
-	if ((lp = hp->table[hashval])) {
-		if (!strcmp(lp->key, key)) {
-			hp->table[hashval] = lp->next;
-			hp->count--;
-			free(lp->key);
-			free(lp);
-			return true;
-		}
-	} else {
-		while (lp->next) {
-			list_t *del = lp->next;
-			lp->next = lp->next->next;
-			hp->count--;
-			free(del->key);
-			free(del);
-			lp = lp->next;
-			return true;
-		}
-	}
-	return false;
-}

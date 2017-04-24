@@ -17,5 +17,4 @@ void         clear_hashtable(hashtable_t *hp);
 int          get_hashval(hashtable_t *hp, const char *key);
 int          getval_hashtable(hashtable_t *hp, const char *key, bool *found);
 bool         add_hashtable(hashtable_t *hp, const char *key, int val);
-bool         del_hashtable(hashtable_t *hp, const char *key);
 #endif /* HASH_H */
