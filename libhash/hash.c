@@ -72,7 +72,7 @@ int get_hashval(hashtable_t *hp, const char *key)
 	char *pkey, *ckey;
 	
         ckey= strdup(key);
-	for (pkey=ckey; *pkey!='\0'; pkey++)
+	for (pkey=ckey; *pkey; pkey++)
 		val = (val << 3) + (unsigned int)*pkey;
 	free(ckey);
 	return val % hp->size;
